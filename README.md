@@ -453,6 +453,54 @@ Suggested branching strategy for collaborative development:
 
 ---
 
+---
+
+## 🔁 Continuous Integration (CI)
+
+This project includes a **GitHub Actions CI pipeline**.
+
+The pipeline automatically runs on:
+
+- Push to `main`
+- Pull requests targeting `main`
+
+### What the CI does:
+
+- Sets up Java 17
+- Caches Maven dependencies
+- Runs unit tests (`mvn test`)
+- Builds the project (`mvn package`)
+- Validates Docker build
+
+### CI Workflow Location
+
+
+.github/workflows/ci.yml
+
+
+### Example CI Steps
+
+
+- Build & Test
+  run: mvn -B clean test
+
+- Package
+  run: mvn -B clean package -DskipTests
+
+- Docker Build Validation
+  run: docker build -t employee-service:ci .
+
+This ensures that:
+
+The application compiles successfully
+
+All tests pass
+
+The Docker image builds correctly
+
+---
+
+
 ## 📂 Evidence of Functionality
 
 Project evidence can be included in the `evidence/` folder:

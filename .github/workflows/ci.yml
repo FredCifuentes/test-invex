@@ -26,3 +26,6 @@ jobs:
 
       - name: Package (skip tests)
         run: mvn -B clean package -DskipTests
+
+      - name: Docker build (validation)
+        run: docker build -t employee-service:ci .
