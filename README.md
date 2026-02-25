@@ -439,17 +439,6 @@ Suggested branching strategy for collaborative development:
 
 - `main` → stable / production-ready branch
 - `develop` → integration branch
-- `feature/*` → new features
-- `hotfix/*` → urgent production fixes
-
-### Example feature branches
-- `feature/crud-employees`
-- `feature/dto-mapper-validation`
-- `feature/openapi-documentation`
-- `feature/unit-tests`
-- `feature/dockerization`
-- `feature/basic-security`
-- `hotfix/date-parse-handler`
 
 ---
 
